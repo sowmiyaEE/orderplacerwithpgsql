@@ -5,7 +5,7 @@ const port=3001;
 app.listen(port,()=>{console.log(`listening on ${port}`);
 });
 const pool = new Pool({
-    connectionString: "postgres://nkkwpyccizwdsf:50269a422b86e5ddea3d4d366a4611e25948d85d5fe4a1e902bb0dcf3dd26e6b@ec2-52-54-23-130.compute-1.amazonaws.com:5432/ddf4gd8u37m2ag",
+    connectionString: process.env.DATABASE_URL,
     ssl: {
         rejectUnauthorized: false
     }
