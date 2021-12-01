@@ -1,0 +1,7 @@
+.tyuu{display:flex;
+width:100%;flex-wrap:wrap;}
+.iou{ height:40px;width:50%;margin-left:10%;}
+.oiu{border-radius:8%;width:20%;margin-top:2%;margin-left:20%;}
+.err{width:20%;min-width:20%;margin-left:20%;}
+.elem{width:100%;margin-left:30%;}
+.hers{font:22px/2em bold sans-serif UI;letter-spacing:3px;}

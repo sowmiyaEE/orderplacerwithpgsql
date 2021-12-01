@@ -1,0 +1,6 @@
+.tyu{display:flex;flex-wrap:wrap;overflow:hidden;
+width:100%;
+}
+.gothr{text-decoration:none;}
+.gothr:hover{color:orange;}
+.uuid{font-size:30px}

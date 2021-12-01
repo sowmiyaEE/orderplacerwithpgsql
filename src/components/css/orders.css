@@ -1,0 +1,6 @@
+.ta{display:flex;flex-wrap:wrap;width:60%;
+justify-content:center;
+margin:2%;padding:8%;}
+.te{
+border:1px solid grey;
+padding:5%;width:90px;height:20px;}

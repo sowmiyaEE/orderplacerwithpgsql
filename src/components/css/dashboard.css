@@ -1,0 +1,16 @@
+.navigator{
+width:100%;
+min-height:250px;
+justify-content:center;
+margin:0 0 0 0;
+background-color:violet;
+border-radius:20%;
+color:white;
+}
+.display{
+padding:5%;
+margin:5%;
+width:90%;
+margin-top:2px;
+justify-content:center;
+}

@@ -1,0 +1,24 @@
+
+.qinput{width:80%;justify-content:center;border-radius:2%;}
+.search{cursor:pointer;width:40%;
+letter-spacing:4px;margin-left:2%;margin:4%;
+}
+
+.ser{
+width:20%;justify-content:center;margin:4%;margin-left:35%;
+
+}
+.singleproduct{
+display:block;
+overflow:hidden;
+}
+.allprods{
+ border:none;
+ width:40%;
+margin:4%;
+letter-spacing:4px;margin-left:2%;
+text-decoration:none;
+background:transparent;
+color:black;
+}
+.allprods:hover{color:rgb(50,30,90);}

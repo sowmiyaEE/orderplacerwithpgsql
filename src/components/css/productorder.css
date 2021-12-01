@@ -1,0 +1,23 @@
+.alldow{display:flex;flex-wrap:wrap;margin-down:2%;width:100%;background-color:black;justify-content:center;}
+.srcr{margin:1%;margin-down:7px;width:60%;
+height:50%;
+padding:5%;color:white;font-size:25px;display:block;}
+.isrcr{margin:1%;margin-down:7px;padding:5%;
+width:30px;height:10px;}
+.bsrcr{
+margin-left:2%;margin-down:7px;margin-top:15px;
+width:45px;height:28px;
+font-size:20px;
+color:white;
+border:1px solid white;
+background-color:black;
+}
+.psrc{
+width:80%;
+height:200px;
+margin-left:10%;
+justify-content:center;
+}
+.dsrcr{margin:0 0 0 0;
+padding:2 2 2 2;
+margin-left:35%;}
