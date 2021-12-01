@@ -11,6 +11,8 @@
  "scripts": {
   "test": "react-scripts test --env=jsdom",
   "start": "concurrently \"react-scripts start\" \"node ./src/server/server.js\"",
+  "build":"react-scripts build",
+  "eject": "react-scripts eject"
  },
 "proxy":"http://localhost:3001",
  "keywords": [],
@@ -26,7 +28,7 @@
   "css-loader": "^5.0.2",
   "html-webpack-plugin": "^5.1.0",
   "style-loader": "^2.0.0",
-  "webpack": "5.22.0",
+  "webpack": "5.64.0",
   "webpack-cli": "^4.9.1",
   "webpack-dev-server": "^3.11.2"
  },
