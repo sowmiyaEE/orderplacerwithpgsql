@@ -14,8 +14,7 @@ constructor(props)
 v=true;
    this.state={selector:'products'};
 this.chagestate=this.chagestate.bind(this);
-if(this.props.uid!=null)
-this.state={uid:this.props.uid,selector:'products'};
+this.state={uid:props.uid,selector:'products'};
 this.setst=this.setst.bind(this);
 }
 
@@ -28,7 +27,7 @@ setst(u){this.setState({uid:u,selector:'products'});}
 
 render(){
  return(<div>
-{(this.state.uid!=null)?
+{((this.state.uid==null)||(this.state.uid==undefined))?
 <Getuid setst={this.setst}/>:
 <div></div>}
 <Upnavigation className='navigator' chagestate={this.chagestate} uid={this.state.uid} />
