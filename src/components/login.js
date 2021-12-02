@@ -34,9 +34,10 @@ return(
 
            password 
 <input className='useri'  onChange={this.val} id='password' type='text' />
-<small>Use 'ok','ok' as user,password </small>
+
 <Link to="/validateuser"  className='log02' 
 state={{username:this.state.un,password:this.state.ps}}>Login</Link>
+<small>Can also use 'ok','ok' as user,password </small>
 </div>);}
 }
 export default login;

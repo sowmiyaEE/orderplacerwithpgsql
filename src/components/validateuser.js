@@ -67,7 +67,7 @@ if(s==false)
 props.changestate(rt);}
 return<div></div>;
 }
-if(vars.username.length!==0 && vars.password.length!==0)
+else if(vars.username.length!==0 && vars.password.length!==0)
 {
 
 

@@ -54,7 +54,7 @@ else if(ms0.match('still'))return(<div>{ms0} waiting</div>);
 else if(ms0.match('created'))
 {return (<div className='tyu'>
 <label className='uuid'>{ms0}</label>
-<Link className='gothr' to='/dashboard' state={{uid:ms0,selector:"products"}}>
+<Link className='gothr' to='/dashboard' state={{uid:r.cname+r.cage,selector:"products"}}>
 GO to dashboard ({ms0})</Link>
 </div>);
 }
