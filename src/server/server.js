@@ -1,7 +1,7 @@
 const express=require('express');
 const {Pool} = require('pg');
 const app=express();
-const port=3001;
+const port=process.env.port || 3001;
 app.listen(port,()=>{console.log(`listening on ${port}`);
 });
 const pool = new Pool({
