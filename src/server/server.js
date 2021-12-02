@@ -13,7 +13,7 @@ const pool = new Pool({
 
 //createnewuser
 
-app.get('/createnewuser',(req,res)=> {
+app.get('/api/createnewuser',(req,res)=> {
 
 //console.log(req,req.query.uid,req.query.name,req.query.phone,req.query.age,req.query.password);
 pool.query(`INSERT INTO users VALUES($1,$2,$3,$4,$5);`,
@@ -38,7 +38,7 @@ pool.query(`INSERT INTO users VALUES($1,$2,$3,$4,$5);`,
 
 
 //validate
-app.get('/validate',(req,res)=> {
+app.get('/api/validate',(req,res)=> {
 console.log(req.query.username,req.query.password);
 pool.query(`SELECT uid FROM Users WHERE username=$1 AND password=$2;`,
 [req.query.username,req.query.password], (err, result) => {
@@ -59,7 +59,7 @@ res.send(result.rows);
 
 //products
 
-app.get('/products',(req,res)=> {
+app.get('/api/products',(req,res)=> {
 console.log("ww",req.query.search);
 pool.query(`SELECT * FROM products WHERE description like ${"'%"+req.query.search+"%'"}`, (err, result) => {
     if (err) {
@@ -77,7 +77,7 @@ res.send(result.rows);
 });
 //orders
 
-app.get('/orders',(req,res)=> {
+app.get('/api/orders',(req,res)=> {
 //console.log("uid like'"+req.query.uid+"'");
 pool.query(`SELECT * FROM Orders WHERE uid like ${"'"+req.query.uid+"'"};`, (err, result) => {
     if (err) {
@@ -95,7 +95,7 @@ res.send(result.rows);
 
 //allorders
 
-app.get('/allorders',(req,res)=> {
+app.get('/api/allorders',(req,res)=> {
 
 pool.query(`SELECT * FROM Orders;`, (err, result) => {
     if (err) {
@@ -114,7 +114,7 @@ res.send(result.rows);
 
 //addproduct
 
-app.get('/addproduct',(req,res)=> {
+app.get('/api/addproduct',(req,res)=> {
 console.log('addingprodduct',req.query.src);
 pool.query(`INSERT INTO products VALUES($1,$2,$3,$4);`,
 [req.query.id,req.query.src,req.query.rate,req.query.description], 
@@ -135,7 +135,7 @@ res.send(`{"msg":"Success-insert values to products"}`);
 
 //addorder
 
-app.get('/addorder',(req,res)=>{
+app.get('/api/addorder',(req,res)=>{
 pool.query(`INSERT INTO orders VALUES($1,$2,$3);`,
 [req.query.uid,req.query.pid,req.query.qty],
 (err,result)=>{

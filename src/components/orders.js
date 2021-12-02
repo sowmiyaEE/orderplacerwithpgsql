@@ -10,7 +10,7 @@ getorders(uid)   {
 //data
 let d=[{'uid':23,pid:'w3',qty:'2'},{uid:'h45',pid:'pkp',qty:'3'}];
 
-var url=`/orders?uid=${uid}`;
+var url=`/api/orders?uid=${uid}`;
 if(uid=="nbnpd")url=`/allorders`;
 fetch(url)
 .then(response=>{

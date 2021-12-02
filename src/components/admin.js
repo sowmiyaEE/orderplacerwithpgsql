@@ -1,5 +1,6 @@
 import React from 'react';
 import Orders from './orders.js';
+import Topp from './topp.js';
 import className from 'classnames';
 import './css/admin.css';
 class admin extends React.Component{
@@ -18,7 +19,7 @@ rate=element.children[5].value;
 des=element.children[8].value;
 pid=src+rate;
 
-fetch(`/addproduct?id=${pid}&src=${src}&rate=${rate}&description=${des}`)
+fetch(`/api/addproduct?id=${pid}&src=${src}&rate=${rate}&description=${des}`)
 .then(response=> {return response.json();})
 .then(responsedata=>{console.log(responsedata,"=responsedata");return responsedata;})
 .then(data=>{
@@ -53,6 +54,7 @@ element.children[8].value,
 render(){
 return(
 <div className='tyuu'>
+<Topp/>
 <div className='hers' style={{marginLeft:'35%'}}>ORDERS</div>
 <Orders uid={'nbnpd'}/>
 

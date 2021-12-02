@@ -40,7 +40,7 @@ onClick={minuspress} >-</button>
 <p className="dsrcr">{vars.rate}</p>
 <button className="bsrcr" onClick={()=>
 {console.log(vars.uid,vars.pid,qty);
- fetch(`/addorder?uid=${vars.uid}&pid=${vars.pid}&qty=${qty}`)
+ fetch(`/api/addorder?uid=${vars.uid}&pid=${vars.pid}&qty=${qty}`)
 .then(response=>{
 return response.json();}).then(responses=>{return responses})
 .then(responsedata=>{

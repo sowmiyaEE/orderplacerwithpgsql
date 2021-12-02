@@ -71,7 +71,7 @@ if(vars.username.length!==0 && vars.password.length!==0)
 {
 
 
-fetch(`/validate?username=${vars.username}&password=${vars.password}`)
+fetch(`/api/validate?username=${vars.username}&password=${vars.password}`)
 .then(response =>{
 
 return response.json();})

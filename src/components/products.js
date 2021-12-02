@@ -22,7 +22,7 @@ document.getElementById('searchid').value='';
 let search=this.state.val;
 console.log("searching",search);
 let r=[{src:"ddd",rate:"23",description:"er",pid:"3e"},{src:"ddd",rate:"23",description:"er",pid:"3e"}];
- fetch('/products?search='+search)
+ fetch('/api/products?search='+search)
 .then(response=>{
  return response.json();
 })
