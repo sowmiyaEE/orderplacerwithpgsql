@@ -11,7 +11,7 @@ const[color, setms0] = useState('');
  r=location.state;
 var already=false;
 if(ms0=='still')
-fetch('/validate?username='+r.cname+'&password='+r.cpass).then(response=>{return response.json();}).then(responsedata=>{return responsedata})
+fetch('/api/validate?username='+r.cname+'&password='+r.cpass).then(response=>{return response.json();}).then(responsedata=>{return responsedata})
 .then(data=>{
 if(!(data.length>0))
 {
@@ -27,7 +27,7 @@ setms0("already existing user-failed");
 
 
 if(ms0=="creating..."){
-var ur='/createnewuser?uid='+r.cname+r.cage+'&name='+r.cname+'&phone='+r.cphone+'&age='+r.cage+'&password='+r.cpass;
+var ur='/api/createnewuser?uid='+r.cname+r.cage+'&name='+r.cname+'&phone='+r.cphone+'&age='+r.cage+'&password='+r.cpass;
 fetch(ur).then(response =>{return response.json();}).then(responsedata=>{return responsedata;})
 .then(data=>{
 
