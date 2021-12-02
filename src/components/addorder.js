@@ -25,8 +25,8 @@ const [qty,changeqty]=useState('');
 vars=location.state;
 console.log(vars);
 return <div className="alldow" >
-<Link style={{color:'black',fontSize:'30px',textDecoration:'none'}}target="top" to='/dashboard' state={{uid:vars.uid}}>
-GO to dashboard</Link>
+<Link style={{color:'black',fontSize:'30px',padding:'5%',textDecoration:'none'}}target="top" to='/dashboard' state={{uid:vars.uid}}>
+Dashboard</Link>
 <div className="srcr">
 <img src={vars.src} className="psrc" alt="img"></img>
 <div className="dsrcr">{vars.description}</div>
@@ -44,13 +44,14 @@ onClick={minuspress} >-</button>
 .then(response=>{
 return response.json();}).then(responses=>{return responses})
 .then(responsedata=>{
-  alert(responsedata);  
+  alert(responsedata.msg+'!');  
+ 
 }
 )
 .catch(err=>
 {
 console.log(err);
-alert('response=',{err});
+alert('some error try again');
 }
 )
 }

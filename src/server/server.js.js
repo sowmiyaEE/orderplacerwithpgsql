@@ -20,13 +20,13 @@ pool.query(`INSERT INTO users VALUES($1,$2,$3,$4,$5);`,
 [req.query.uid,req.query.name,req.query.phone,req.query.age,req.query.password], 
 (err, result) => {
     if (err) {
-        console.log("Error - Failed to insert values to users");
+       
         
 
         res.send(`{"msg":"failed"}`);
     }
     else{
-        console.log("success");
+        
       res.send(`{"msg":"created"}`);
     }
 });
@@ -43,13 +43,12 @@ console.log(req.query.username,req.query.password);
 pool.query(`SELECT uid FROM Users WHERE username=$1 AND password=$2;`,
 [req.query.username,req.query.password], (err, result) => {
     if (err) {
-        console.log("validate:Error - Failed to validate -users");
-        console.log(err);
-var resu=[{uid:23}];
+        
+
 res.send(`{"msg":"error"}`);
     }
     else{
-        console.log('validate',result.rows);
+       
 res.send(result.rows);
     }
 });
@@ -64,8 +63,7 @@ app.get('/products',(req,res)=> {
 console.log("ww",req.query.search);
 pool.query(`SELECT * FROM products WHERE description like ${"'%"+req.query.search+"%'"}`, (err, result) => {
     if (err) {
-        console.log("Error - Failed to select all from products");
-        //console.log(err);
+       
 var sw=[{src:"wer",rate:"230",description:"dsdkdjk djks dfsjk",pid:"333"},{src:"wer",rate:"230",description:"dsdkdjk djks dfsjk",pid:"323"}];
 //res.send(`{"msg":${sw}}`);
 res.send(sw);
@@ -81,15 +79,14 @@ res.send(result.rows);
 
 app.get('/orders',(req,res)=> {
 //console.log("uid like'"+req.query.uid+"'");
-pool.query(`SELECT * FROM Orders WHERE uid like ${"'"+req.query.uid+"';"}`, (err, result) => {
+pool.query(`SELECT * FROM Orders WHERE uid like ${"'"+req.query.uid+"'"};`, (err, result) => {
     if (err) {
-        console.log("Error - Failed to select all from orders");
-        console.log(err);
+    
 var resj=[{uid:'3',pid:'3e',qty:'2'},{uid:'2',pid:'3ww',qty:'2'},{uid:'23',pid:'33',qty:'23'}];
 res.send(resj);
     }
     else{
-        console.log(result.rows);
+     
 res.send(result.rows);
     }
 });

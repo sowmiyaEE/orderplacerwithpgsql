@@ -8,6 +8,7 @@ var s=false;
 class validateuser extends React.Component{
 constructor(props){
 super(props);
+s=false;
 this.state={dotcallagai:false,uid:"uid",a:false};
 this.changestate=this.changestate.bind(this);
 }

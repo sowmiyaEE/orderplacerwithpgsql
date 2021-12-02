@@ -31,7 +31,7 @@ element.children[2].value='';
 element.children[5].value='';
 element.children[8].value='';
 this.setState({rtext:'ok'});
-alert('added '+src+'to products!'); 
+
 }
 }).catch(err=>{alert("caught error");});
 
@@ -53,7 +53,7 @@ element.children[8].value,
 render(){
 return(
 <div className='tyuu'>
-<div className='hers'>ORDERS</div>
+<div className='hers' style={{marginLeft:'35%'}}>ORDERS</div>
 <Orders uid={'nbnpd'}/>
 
 <br/><br/>
@@ -71,7 +71,7 @@ return(
 <button className='oiu' onClick={this.addproduct}>ok</button>
 
 <br/><br/>
-<label id='msg'>{this.state.rtext}</label>
+<label id='msg' className='pushpa'>{this.state.rtext}</label>
 </div>
   </div>
    

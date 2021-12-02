@@ -16,9 +16,9 @@ this.uid=this.props.uid;
 return(
    <div className='fulldo'>
 <div className='imgdiv'>
- <img src={this.src} width="120px" height="160px" alt='image'/>
+ <img src={this.src} width="130px" height="165px" alt='image'/>
  <small style={{width:'120px',font:'20px bold sans-serif UI'}}>{this.description}</small>
- <small>{ "       $"}</small> 
+ <small>{ "$"}</small> 
 <label className='rerate'>{this.rate}</label>
 
 </div>

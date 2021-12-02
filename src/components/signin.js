@@ -168,10 +168,13 @@ console.log(gname);
 <small>has digits and letters</small>
 <br/>
 
-<Link id="secret" style={{margin:'35px',marginRight:'0px'}} state={{cname:this.state.cname,cphone:this.state.cphone,cage:this.state.cage,cpass:this.state.cpass}} className='visibled' to='/createnewuser' >
+<Link id="secret" style={{margin:'35px',marginRight:'0px',fontSize:'30px'}} state={{cname:this.state.cname,cphone:this.state.cphone,cage:this.state.cage,cpass:this.state.cpass}} className='visibled' to='/createnewuser' >
 Create</Link>
-<Link target="top" style={{margin:'35px'}} to='/topp' >
-login</Link>
+<Link to="/login" target="top" style={{margin:'35px',marginRight:'0px',fontSize:'30px'}}>
+Login</Link>
+<Link target="top" style={{margin:'35px',fontSize:'30px'}} to='/topp' >
+Back</Link>
+
 
 </div>
 );

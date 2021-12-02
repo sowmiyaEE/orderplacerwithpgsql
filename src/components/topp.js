@@ -9,8 +9,7 @@ return(
      <Link to="/login" target="top" className='log02'>Login</Link>   
        <Link to="/signin" target="top" className='log02'>signin</Link>   
        <Link to="/admin" className='log02'>Admin</Link>
-<hr/><Link className='log02' target="top" 
-to='/dashboard' state={{uid:'test',selector:"products"}} >
+<hr/><Link className='log02' to='/dashboard' state={{uid:'test',selector:"products"}} >
 GO to testdashboard</Link>
 </div>
 );

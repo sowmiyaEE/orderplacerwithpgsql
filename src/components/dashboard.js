@@ -11,6 +11,7 @@ class dashboard extends Component{
 constructor(props)
 {
    super(props);
+v=true;
    this.state={selector:'products'};
 this.chagestate=this.chagestate.bind(this);
 if(this.props.uid!=null)

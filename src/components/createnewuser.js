@@ -50,15 +50,15 @@ return(<div className='tyu'>
 <label >{ms0 }</label><br/>
 <Link to='/topp' target="top" className='gothr'>Back</Link></div>);
 }
-else if(ms0.match('still'))return(<div>(ms0} waiting</div>);
+else if(ms0.match('still'))return(<div>{ms0} waiting</div>);
 else if(ms0.match('created'))
 {return (<div className='tyu'>
 <label className='uuid'>{ms0}</label>
-<Link className='gothr' to='/dashboard' state={{uid:ms0,selector:"products"}} states={{uid:ms0},{selector:'products'}}>
-GO to dashboard</Link>
+<Link className='gothr' to='/dashboard' state={{uid:ms0,selector:"products"}}>
+GO to dashboard ({ms0})</Link>
 </div>);
 }
-else return "what?";
+else return <label className='uuid'>{ms0}</label>;
 }
 
 
