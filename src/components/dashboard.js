@@ -28,7 +28,7 @@ setst(u){this.setState({uid:u,selector:'products'});}
 
 render(){
  return(<div>
-{(this.uid!=null)?
+{(this.state.uid!=null)?
 <Getuid setst={this.setst}/>:
 <div></div>}
 <Upnavigation className='navigator' chagestate={this.chagestate} uid={this.state.uid} />
